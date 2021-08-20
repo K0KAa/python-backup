@@ -1,0 +1,7 @@
+{%extends "practice/layout.html" %} {% block body %}
+<ul>
+  {% for task in tasks %}
+  <li>{{task.Title}}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'practice:add'%}">back to add</a> {% endblock %}

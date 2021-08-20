@@ -1,0 +1,6 @@
+{%extends "todo/layout.html"%} {%block body%}
+<form action="{%url 'todo_list:add'%}" method="POST">
+    {%csrf_token%} {{form}}
+    <input type="submit" />
+</form>
+<a href="{%url 'todo_list:index'%}">Todo List</a> {%endblock%}
